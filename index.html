@@ -1,0 +1,650 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GR Tours & Travels</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="GR Tours & Travels, Murdeshwar. Taxi, airport pickups and tour packages across coastal Karnataka. Book on WhatsApp 96209 36143.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+Kannada:wght@500&display=swap">
+<style>
+/* Layout: a classic travel-agency page. Photo hero with a booking bar laid over its lower edge,
+   then plain bands: services, packages, places, vehicles, how to book, contact. */
+:root{
+  --navy:#0B1F44; --navy-2:#13306A; --red:#D52A33; --gold:#F5B31B; --wa:#1FA855;
+  --bg:#FFFFFF; --surface:#FFFFFF; --tint:#EEF3FA; --line:#D9E2EE;
+  --fg:#0B1F44; --fg-2:#45546E; --fg-3:#6B7890;
+  --on-navy:#FFFFFF; --on-navy-2:#B9C6DD;
+  --shadow:0 10px 30px rgba(11,31,68,.10);
+  --f-display:"Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+  --f-body:"DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-kn:"Noto Sans Kannada", "DM Sans", sans-serif;
+  --r:14px; --wrap:1160px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:70px}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:72px}
+.band.alt{background:var(--surface)}
+.head{display:flex;flex-direction:column;gap:10px;margin-bottom:34px;max-width:640px}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.head p{color:var(--fg-2)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:12px 22px;font:600 .95rem/1 var(--f-body);text-decoration:none;cursor:pointer;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#178F48}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2)}
+.btn-ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* top strip + header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
+.strip{background:#F3F6FB;color:var(--fg-2);font-size:.82rem;border-bottom:1px solid var(--line)}
+.strip .wrap{display:flex;justify-content:space-between;gap:12px;padding-block:7px;flex-wrap:wrap}
+.strip a{color:var(--navy);text-decoration:none;font-weight:700}
+.strip .loc{display:none}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+header.top > .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{font:800 1.6rem/1 var(--f-display);letter-spacing:-.04em}
+.logo .mark .g{color:var(--navy)} .logo .mark .r{color:var(--red)}
+.logo .word{font:700 .72rem/1.15 var(--f-body);letter-spacing:.14em;color:var(--fg);border-left:1.5px solid var(--line);padding-left:10px}
+nav.menu{display:none;gap:26px}
+nav.menu a{text-decoration:none;font-weight:500;color:var(--fg-2);font-size:.95rem}
+nav.menu a:hover{color:var(--fg)}
+header .btn{padding:10px 16px;font-size:.88rem}
+header .btn .long{display:none}
+
+/* hero */
+.hero{position:relative;background:var(--navy)}
+.hero .pic{position:relative;height:clamp(420px,62vw,600px);overflow:hidden}
+.hero .pic img{width:100%;height:100%;object-fit:cover;object-position:68% 45%}
+.hero .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,31,68,.55) 0%,rgba(11,31,68,.35) 40%,rgba(11,31,68,.9) 100%)}
+.hero .copy{position:absolute;left:0;right:0;bottom:120px;z-index:2;color:#fff}
+.hero .copy .wrap{display:flex;flex-direction:column;gap:14px}
+.hero .tag{align-self:flex-start;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.35);padding:6px 12px;border-radius:999px;font-size:.8rem;font-weight:600}
+.hero h1{font-size:clamp(2.1rem,5.6vw,4rem);font-weight:800;max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .sub{font-size:1.05rem;color:#E6EDF8;max-width:46ch}
+.hero h1,.hero .sub{text-shadow:0 2px 14px rgba(11,31,68,.55)}
+.field.wide{grid-column:1/-1}
+
+/* booking bar */
+.book{position:relative;z-index:5;margin-top:-88px}
+.book form{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--line);padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.field label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3)}
+.field select,.field input{width:100%;height:46px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--fg);font:500 .95rem var(--f-body);padding:0 12px;appearance:none;-webkit-appearance:none}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--fg-3) 50%),linear-gradient(135deg,var(--fg-3) 50%,transparent 50%);background-position:calc(100% - 18px) 20px,calc(100% - 13px) 20px;background-size:5px 5px;background-repeat:no-repeat;padding-right:32px}
+.field select:focus,.field input:focus{border-color:var(--navy-2);outline:none}
+.book .go{grid-column:1/-1}
+.book .go .btn{width:100%;height:50px;font-size:1rem}
+.book .hint{grid-column:1/-1;font-size:.82rem;color:var(--fg-3);text-align:center}
+
+/* trust row */
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-block:34px 8px}
+.fact{display:flex;gap:12px;align-items:flex-start}
+.fact .ic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--tint);display:grid;place-items:center;color:var(--red)}
+.fact .ic svg{width:20px;height:20px}
+.fact b{display:block;font-size:.95rem}
+.fact span{font-size:.85rem;color:var(--fg-2)}
+
+/* services */
+.grid{display:grid;gap:18px;grid-template-columns:1fr}
+.svc{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:10px}
+.band.alt .svc{background:var(--bg)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center}
+.svc .ic svg{width:22px;height:22px}
+.svc p{color:var(--fg-2);font-size:.95rem}
+.svc a{margin-top:auto;font-weight:600;font-size:.9rem;color:var(--wa);text-decoration:none}
+.svc a:hover{text-decoration:underline}
+
+/* packages */
+.pkg{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.pkg .art{background:linear-gradient(160deg,var(--tint),var(--bg));height:200px;display:grid;place-items:center;padding:14px}
+.pkg .art{overflow:hidden}
+.pkg .art img{height:172px;width:100%;object-fit:contain;filter:drop-shadow(0 12px 14px rgba(11,31,68,.18))}
+.pkg .body{padding:20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.pkg .meta{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--tint);color:var(--fg-2)}
+.chip.red{background:rgba(213,42,51,.1);color:var(--red)}
+.pkg ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.pkg li{display:flex;gap:10px;font-size:.92rem;color:var(--fg-2)}
+.pkg li .d{flex:none;width:44px;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3);padding-top:2px}
+.pkg .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid var(--line)}
+.pkg .price{font-size:.85rem;color:var(--fg-3)}
+.pkg .price b{display:block;color:var(--fg);font-size:.95rem}
+.pkg .btn{padding:10px 16px;font-size:.88rem}
+
+/* places */
+.places{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.place{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 12px 16px;display:flex;flex-direction:column;gap:4px}
+.place .im{aspect-ratio:1/1;display:grid;place-items:center;background:var(--tint);border-radius:10px;margin-bottom:8px;padding:8px}
+.place .im{position:relative}
+.place .im img{position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);object-fit:contain}
+.place h3{font-size:1.02rem;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.place h3 small{font:500 .78rem var(--f-kn);color:var(--fg-3)}
+.place p{font-size:.84rem;color:var(--fg-2);line-height:1.45}
+.place .best{font-size:.78rem;color:var(--red);font-weight:600}
+
+/* vehicles */
+.veh{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.veh .im{height:150px;display:grid;place-items:center}
+.veh .im img{height:150px;width:100%;object-fit:contain}
+.veh .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.veh .seats{font:700 .82rem var(--f-body);color:var(--red)}
+.veh ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px;font-size:.92rem;color:var(--fg-2)}
+.veh ul li::before{content:"✓";color:var(--wa);font-weight:700;margin-right:8px}
+.veh .btn{margin-top:auto}
+
+/* steps */
+.steps{display:grid;gap:16px;grid-template-columns:1fr;counter-reset:s}
+.step{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.step .n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--navy);font:800 1.05rem/38px var(--f-display);text-align:center}
+.step p{color:var(--fg-2);font-size:.93rem;margin-top:4px}
+
+/* contact */
+.contact{background:#F3F6FB;color:var(--fg);border-top:1px solid var(--line)}
+.contact .wrap{display:grid;gap:28px;padding-block:64px}
+.contact h2{color:var(--fg)}
+.contact p{color:var(--fg-2)}
+.cards{display:grid;gap:12px}
+.cc{background:#FFFFFF;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column;gap:2px}
+.cc small{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3);font-weight:700}
+.cc a,.cc span{color:var(--fg);font-weight:600;font-size:1.05rem;text-decoration:none;font-variant-numeric:tabular-nums}
+.contact .acts{display:flex;gap:10px;flex-wrap:wrap}
+
+footer{background:#FFFFFF;color:var(--fg-3);font-size:.85rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-direction:column;gap:6px;padding-block:22px calc(22px + env(safe-area-inset-bottom,0px))}
+footer b{color:var(--fg)}
+
+/* floating WhatsApp */
+.fab{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:70;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px rgba(31,168,85,.4);text-decoration:none}
+.fab svg{width:28px;height:28px}
+
+
+.rpk{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.rpk .top{display:flex;flex-direction:column;gap:8px}
+.rpk h3{font-size:1.3rem}
+.rpk .meta{display:flex;gap:8px;flex-wrap:wrap}
+.route{display:flex;flex-wrap:wrap;align-items:center;gap:6px 4px;font-size:.82rem;font-weight:600;color:var(--fg)}
+.route span{background:var(--tint);border-radius:999px;padding:4px 10px;white-space:nowrap}
+.route span.end{background:var(--navy);color:#fff}
+.route i{font-style:normal;color:var(--fg-3);font-weight:400}
+.days{display:flex;flex-direction:column;gap:14px}
+.day{border-left:3px solid var(--gold);padding-left:14px;display:flex;flex-direction:column;gap:6px}
+.day b{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.day ol{margin:0;padding:0 0 0 18px;display:flex;flex-direction:column;gap:3px;font-size:.92rem;color:var(--fg-2)}
+.day .night{font-size:.85rem;color:var(--fg-3)}
+.rpk .row{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:14px;border-top:1px solid var(--line)}
+.rpk .row small{font-size:.85rem;color:var(--fg-3)}
+.rpk .row .btn{padding:10px 16px;font-size:.88rem}
+
+/* Places as a clean list */
+.plist{display:grid;gap:0;grid-template-columns:1fr;border-top:1px solid var(--line)}
+.plist .it{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:center}
+.plist h3{font-size:1.08rem;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.plist h3 small{font:500 .8rem var(--f-kn);color:var(--fg-3)}
+.plist p{grid-column:1/2;font-size:.9rem;color:var(--fg-2)}
+.plist a{grid-row:1/3;grid-column:2;font-weight:600;font-size:.88rem;color:var(--wa);text-decoration:none;white-space:nowrap}
+@media (min-width:960px){ .plist{grid-template-columns:1fr 1fr;column-gap:40px} }
+
+@media (min-width:620px){
+  .field.wide{grid-column:auto}
+  .hero .pic::after{background:linear-gradient(90deg,rgba(8,20,45,.78) 0%,rgba(8,20,45,.45) 45%,rgba(8,20,45,0) 75%),linear-gradient(180deg,rgba(8,20,45,0) 55%,rgba(8,20,45,.7) 100%)}
+  .hero .pic img{object-position:60% 40%}
+  .places{grid-template-columns:repeat(3,1fr)}
+  .grid.two{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:repeat(4,1fr)}
+  .book form{grid-template-columns:repeat(3,1fr)}
+  .strip .loc{display:inline}
+  header .btn .long{display:inline}
+}
+@media (min-width:960px){
+  nav.menu{display:flex}
+  .grid.three{grid-template-columns:repeat(3,1fr)}
+  .grid.four{grid-template-columns:repeat(4,1fr)}
+  .places{grid-template-columns:repeat(4,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .book form{grid-template-columns:1.2fr 1.2fr 1fr .7fr .7fr auto;align-items:end;padding:16px}
+  .book .go{grid-column:auto}
+  .book .go .btn{height:46px;padding:0 22px}
+  .book .hint{text-align:left}
+  .contact .wrap{grid-template-columns:1.1fr 1fr;align-items:center}
+  .hero .copy{bottom:130px}
+}
+
+/* ---------- header actions + phone menu ---------- */
+.hact{display:flex;align-items:center;gap:8px}
+.menubtn{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer;padding:0}
+.menubtn svg{width:22px;height:22px}
+.sheet{border-top:1px solid var(--line);background:var(--surface);box-shadow:0 18px 30px rgba(11,31,68,.12);max-height:calc(100vh - 140px);overflow-y:auto}
+.sheet nav{display:flex;flex-direction:column;padding-block:6px 16px}
+.sheet nav > a{display:flex;justify-content:space-between;align-items:center;padding:15px 2px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600;font-size:1.02rem}
+.sheet nav > a svg{width:18px;height:18px;color:var(--fg-3)}
+.sheet-call{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.sheet-call .btn{height:46px;padding:0 10px;font-size:.92rem}
+
+/* ---------- bottom tab bar (phones and tablets) ---------- */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:grid;grid-template-columns:repeat(5,1fr);align-items:end;
+  background:rgba(255,255,255,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);
+  padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px))}
+.tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--fg-2);font-size:.68rem;font-weight:600;padding:4px 0;min-height:48px;justify-content:flex-end}
+.tabbar svg{width:22px;height:22px}
+.tabbar .tb-wa i{display:grid;place-items:center;width:52px;height:52px;margin-top:-22px;border-radius:50%;background:var(--wa);color:#fff;box-shadow:0 8px 18px rgba(31,168,85,.38);border:3px solid #fff}
+.tabbar .tb-wa svg{width:26px;height:26px}
+.tabbar .tb-wa span{color:var(--wa)}
+.fab{display:none}
+
+/* ---------- swipe rails ---------- */
+.dots{display:none;justify-content:center;gap:6px;margin-top:14px}
+.dots i{width:7px;height:7px;border-radius:99px;background:var(--line);transition:width .2s ease, background .2s ease}
+.dots i.on{width:20px;background:var(--navy)}
+.more{display:none;align-items:center;justify-content:center;gap:6px;height:42px;border-radius:12px;border:1.5px solid var(--line);background:var(--tint);color:var(--fg);font:600 .9rem var(--f-body);cursor:pointer}
+.more svg{width:16px;height:16px;transition:transform .2s ease}
+.rpk.open .more svg{transform:rotate(180deg)}
+
+@media (max-width:959px){
+  body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+  .hbook{display:none}
+}
+@media (min-width:960px){
+  .menubtn,.sheet,.tabbar{display:none!important}
+  .fab{display:grid}
+}
+
+/* ---------- phone layout ---------- */
+@media (max-width:619px){
+  body{font-size:15px}
+  .strip{display:none}
+  header.top > .wrap{height:60px}
+  .logo .mark{font-size:1.45rem}
+  .band{padding-block:44px}
+  .head{margin-bottom:20px;gap:8px}
+  h2{font-size:1.6rem}
+  .head p{font-size:.95rem}
+
+  .hero{display:grid}
+  .hero > .pic, .hero > .copy{grid-area:1/1}
+  .hero .pic{height:auto}
+  .hero .pic img{position:absolute;inset:0}
+  .hero .copy{position:relative;bottom:auto;padding-block:40px 108px}
+  .hero h1{font-size:2.05rem}
+  .hero .sub{font-size:.98rem}
+  .hero .tag{font-size:.75rem}
+
+  .book{margin-top:-80px}
+  .book form{padding:14px;gap:10px;border-radius:20px;box-shadow:0 16px 40px rgba(11,31,68,.16)}
+  .field label{font-size:.68rem}
+  .field select,.field input{height:48px;font-size:1rem}
+  .book .go .btn{height:52px}
+
+  .facts{display:flex;overflow-x:auto;gap:10px;padding-block:22px 4px;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px));scroll-snap-type:x mandatory;scrollbar-width:none}
+  .facts::-webkit-scrollbar{display:none}
+  .fact{flex:0 0 auto;scroll-snap-align:start;background:var(--tint);border-radius:999px;padding:8px 14px 8px 8px;align-items:center;gap:8px}
+  .fact .ic{width:30px;height:30px;border-radius:50%;background:#fff}
+  .fact .ic svg{width:16px;height:16px}
+  .fact b{font-size:.85rem;white-space:nowrap}
+  .fact span{display:none}
+
+  #services .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .svc{padding:14px;gap:8px;border-radius:16px}
+  .svc .ic{width:38px;height:38px;border-radius:11px}
+  .svc .ic svg{width:19px;height:19px}
+  .svc h3{font-size:.98rem;line-height:1.2}
+  .svc p{font-size:.82rem;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .svc a{font-size:.82rem}
+
+  .grid.snap{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;scrollbar-width:none;
+    margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px));scroll-padding-inline:max(16px,env(safe-area-inset-left,0px));padding-bottom:4px;align-items:flex-start}
+  .grid.snap::-webkit-scrollbar{display:none}
+  .grid.snap > *{flex:0 0 86%;scroll-snap-align:start}
+  .dots{display:flex}
+
+  .rpk{padding:18px;gap:14px;border-radius:20px;box-shadow:0 6px 18px rgba(11,31,68,.06)}
+  .rpk h3{font-size:1.2rem}
+  .rpk .days{display:none}
+  .rpk.open .days{display:flex}
+  .more{display:flex}
+  .route{font-size:.78rem}
+
+  .plist .it{padding:14px 2px}
+  .plist a{font-size:.82rem}
+
+  .veh{padding:16px;border-radius:20px}
+  .veh .im{height:120px}
+  .veh .im img{height:120px}
+  .veh ul{font-size:.88rem}
+
+  .steps{gap:10px}
+  .step{padding:14px;gap:12px}
+  .step .n{width:32px;height:32px;line-height:32px;font-size:.95rem}
+
+  .contact .wrap{padding-block:44px}
+  .contact .acts .btn{flex:1;white-space:nowrap;padding:12px 14px}
+  .cards{grid-template-columns:1fr 1fr}
+  .cards .cc:last-child{grid-column:1/-1}
+  .cc a,.cc span{font-size:.98rem}
+}
+@media (prefers-reduced-motion:reduce){ .dots i,.more svg{transition:none} }
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} .btn{transition:none} .btn:hover{transform:none} }
+</style>
+</head><body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2Z"/></symbol>
+  <symbol id="i-road" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19 8 5M20 19 16 5M12 6v2M12 11v2M12 16v2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2ZM9 4v14M15 6v14"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 12c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2M2 18c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2M12 3v4"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 20V6M2 16h20v4M22 16v-4a3 3 0 0 0-3-3h-8v7M6 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 17H3v-5l2-5h11l3 5h2v5h-2M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM9 17h6M5 12h16"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6"/></symbol>
+</svg>
+
+<div class="strip"><div class="wrap">
+  <span class="loc">Murdeshwar, Bhatkal Taluk, Uttara Kannada</span>
+  <span>Call / WhatsApp <a href="tel:+919620936143">96209 36143</a> · <a href="tel:+919141857173">91418 57173</a></span>
+</div></div>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#home" aria-label="GR Tours & Travels home">
+    <span class="mark"><span class="g">G</span><span class="r">R</span></span>
+    <span class="word">TOURS &amp;<br>TRAVELS</span>
+  </a>
+  <nav class="menu" aria-label="Main">
+    <a href="#services">Services</a><a href="#packages">Packages</a><a href="#places">Places</a><a href="#vehicles">Vehicles</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="hact">
+    <a class="btn btn-wa wa hbook" data-msg="Hi GR Tours & Travels, I'd like to book a vehicle." href="https://wa.me/919620936143" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span>Book<span class="long"> on WhatsApp</span></span></a>
+    <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button>
+  </div>
+</div>
+<div class="sheet" id="sheet" hidden>
+  <nav class="wrap" aria-label="Menu">
+    <a href="#services">Services <svg><use href="#i-right"/></svg></a>
+    <a href="#packages">Tour packages <svg><use href="#i-right"/></svg></a>
+    <a href="#places">Places we cover <svg><use href="#i-right"/></svg></a>
+    <a href="#vehicles">Vehicles <svg><use href="#i-right"/></svg></a>
+    <a href="#contact">Contact <svg><use href="#i-right"/></svg></a>
+    <div class="sheet-call"><a class="btn btn-ghost" href="tel:+919620936143"><svg><use href="#i-phone"/></svg>96209 36143</a><a class="btn btn-ghost" href="tel:+919141857173"><svg><use href="#i-phone"/></svg>91418 57173</a></div>
+  </nav>
+</div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="pic"><img src="img/murdeshwar-photo.webp" alt="Murdeshwar Raja Gopura and the giant Shiva statue by the Arabian Sea" width="1800" height="1350"></div>
+  <div class="copy"><div class="wrap">
+    <span class="tag">Safe journey, happy memories.</span>
+    <h1>Taxi &amp; tour packages across <em>coastal Karnataka</em></h1>
+    <p class="sub">Airport pickups, family trips and sightseeing from Murdeshwar to Gokarna, Jog Falls, Udupi and beyond.</p>
+  </div></div>
+</section>
+
+<div class="wrap book">
+  <form id="enq" aria-label="Plan your trip">
+    <div class="field wide"><label for="f-from">Pickup</label>
+      <select id="f-from">
+        <option>Murdeshwar</option><option>Bhatkal</option><option>Udupi</option><option>Kundapura</option>
+        <option>Mangaluru Airport</option><option>Mangaluru Railway Station</option><option>Goa Airport</option>
+        <option>Hubballi Airport</option><option>Other (I'll share)</option>
+      </select></div>
+    <div class="field wide"><label for="f-to">Where to</label>
+      <select id="f-to">
+        <option>Not sure, suggest a plan</option><option>Murdeshwar Darshan</option><option>Uttara Kannada Falls</option>
+        <option>Murdeshwar to Gokarna</option><option>Murdeshwar to Mangaluru</option><option>Murdeshwar to Sakleshpur</option><option>Gokarna</option><option>Jog Falls</option><option>Netrani Island (scuba)</option>
+        <option>Sirsi &amp; Yana</option><option>Dandeli</option><option>Kollur</option><option>Udupi &amp; Malpe</option>
+        <option>Dharmasthala &amp; Kukke</option><option>Airport / station drop</option>
+      </select></div>
+    <div class="field"><label for="f-date">Date</label><input id="f-date" type="date"></div>
+    <div class="field"><label for="f-days">Days</label>
+      <select id="f-days"><option>1 day</option><option selected>2 days</option><option>3 days</option><option>4 days</option><option>5+ days</option></select></div>
+    <div class="field"><label for="f-ppl">People</label>
+      <select id="f-ppl"></select></div>
+    <div class="go"><button class="btn btn-wa" type="submit"><svg><use href="#i-wa"/></svg>Get price on WhatsApp</button></div>
+    <p class="hint" id="f-hint">Suggested vehicle: 5-seater car · Price on WhatsApp</p>
+  </form>
+</div>
+
+<div class="wrap"><div class="facts" id="facts">
+  <div class="fact"><span class="ic"><svg><use href="#i-pin"/></svg></span><div><b>Local to Murdeshwar</b><span>Based in Bhatkal Taluk</span></div></div>
+  <div class="fact"><span class="ic"><svg><use href="#i-car"/></svg></span><div><b>5, 7 &amp; 11 seaters</b><span>For couples to big groups</span></div></div>
+  <div class="fact"><span class="ic"><svg><use href="#i-plane"/></svg></span><div><b>Airport pickups</b><span>Mangaluru, Goa, Hubballi</span></div></div>
+  <div class="fact"><span class="ic"><svg><use href="#i-chat"/></svg></span><div><b>Book on WhatsApp</b><span>No forms, no sign-up</span></div></div>
+</div></div>
+
+<section class="band" id="services"><div class="wrap">
+  <div class="head"><span class="eyebrow">Services</span><h2>What we do</h2><p>One call or message and we arrange the vehicle, the route and the timing.</p></div>
+  <div class="grid two three">
+    <div class="svc"><span class="ic"><svg><use href="#i-plane"/></svg></span><h3>Airport &amp; station pickup</h3><p>Pickups and drops at Mangaluru, Goa and Hubballi airports and nearby railway stations.</p><a class="wa" data-msg="Hi GR Tours & Travels, I need an airport / railway station pickup." href="https://wa.me/919620936143" target="_blank" rel="noopener">Ask on WhatsApp →</a></div>
+    <div class="svc"><span class="ic"><svg><use href="#i-road"/></svg></span><h3>Outstation taxi</h3><p>One-way or round trips to any town in Karnataka, Goa and nearby states.</p><a class="wa" data-msg="Hi GR Tours & Travels, I need an outstation taxi." href="https://wa.me/919620936143" target="_blank" rel="noopener">Ask on WhatsApp →</a></div>
+    <div class="svc"><span class="ic"><svg><use href="#i-users"/></svg></span><h3>Family &amp; group trips</h3><p>Weddings, temple visits and group tours in 7 and 11-seater vehicles.</p><a class="wa" data-msg="Hi GR Tours & Travels, I'm planning a family / group trip." href="https://wa.me/919620936143" target="_blank" rel="noopener">Ask on WhatsApp →</a></div>
+    <div class="svc"><span class="ic"><svg><use href="#i-map"/></svg></span><h3>Tour packages</h3><p>Day trips and route packages to Gokarna, Mangaluru, the waterfalls and Sakleshpur.</p><a href="#packages">See packages →</a></div>
+    <div class="svc"><span class="ic"><svg><use href="#i-wave"/></svg></span><h3>Scuba at Netrani</h3><p>Netrani Island dives leave from Murdeshwar. Ask us to arrange your dive.</p><a class="wa" data-msg="Hi GR Tours & Travels, I'd like scuba diving at Netrani Island." href="https://wa.me/919620936143" target="_blank" rel="noopener">Ask on WhatsApp →</a></div>
+    <div class="svc"><span class="ic"><svg><use href="#i-bed"/></svg></span><h3>Rooms wherever we go</h3><p>Need a place to stay on the trip? Tell us and we arrange rooms along your route.</p><a class="wa" data-msg="Hi GR Tours & Travels, I need rooms for my trip." href="https://wa.me/919620936143" target="_blank" rel="noopener">Ask on WhatsApp →</a></div>
+  </div>
+</div></section>
+
+<section class="band alt" id="packages"><div class="wrap">
+  <div class="head"><span class="eyebrow">Tour packages</span><h2>Trips from Murdeshwar</h2><p>One road, every stop on the way. Every package can be changed: add a place, skip a place, or start from another town.</p></div>
+  <div class="grid two three snap" id="pkgRail">
+    <article class="rpk">
+      <div class="top"><div class="meta"><span class="chip red">Full day</span><span class="chip">Temple &amp; sea</span></div>
+        <h3>Murdeshwar Darshan</h3>
+        <div class="route"><span>Murdeshwar</span><i>→</i><span>Idagunji</span><i>→</i><span class="end">Apsarakonda</span></div></div>
+      <div class="days"><div class="day"><b>Day 1</b><ol><li>Murdeshwar temple &amp; Shiva statue</li><li>Idagunji Maha Ganapati temple</li><li>Apsarakonda falls &amp; beach</li><li>Sunset at Murdeshwar beach</li></ol></div></div>
+      <button class="more" type="button" aria-expanded="false">See day plan <svg><use href="#i-down"/></svg></button>
+      <div class="row"><small>Price on WhatsApp</small><a class="btn btn-wa wa" data-msg="Hi GR Tours &amp; Travels, I'd like the Murdeshwar Darshan package (full day)." href="https://wa.me/919620936143" target="_blank" rel="noopener">Enquire</a></div>
+    </article>
+    <article class="rpk">
+      <div class="top"><div class="meta"><span class="chip red">2 days · 1 night</span><span class="chip">North coast</span></div>
+        <h3>Murdeshwar to Gokarna</h3>
+        <div class="route"><span>Murdeshwar</span><i>→</i><span>Idagunji</span><i>→</i><span>Honnavar</span><i>→</i><span>Kumta</span><i>→</i><span class="end">Gokarna</span></div></div>
+      <div class="days"><div class="day"><b>Day 1</b><ol><li>Murdeshwar temple &amp; Shiva statue</li><li>Idagunji Maha Ganapati temple</li><li>Apsarakonda falls &amp; beach</li><li>Sharavathi backwaters, Honnavar</li><li>Kasarkod Eco Beach</li></ol><span class="night">Night stay in Gokarna</span></div><div class="day"><b>Day 2</b><ol><li>Gokarna Mahabaleshwar temple</li><li>Om Beach and Kudle Beach</li><li>Mirjan Fort, Kumta</li><li>Dhareshwar temple</li><li>Back to Murdeshwar</li></ol></div></div>
+      <button class="more" type="button" aria-expanded="false">See day plan <svg><use href="#i-down"/></svg></button>
+      <div class="row"><small>Price on WhatsApp</small><a class="btn btn-wa wa" data-msg="Hi GR Tours &amp; Travels, I'd like the Murdeshwar to Gokarna package (2 days)." href="https://wa.me/919620936143" target="_blank" rel="noopener">Enquire</a></div>
+    </article>
+    <article class="rpk">
+      <div class="top"><div class="meta"><span class="chip red">2 days · 1 night</span><span class="chip">South coast</span></div>
+        <h3>Murdeshwar to Mangaluru</h3>
+        <div class="route"><span>Murdeshwar</span><i>→</i><span>Byndoor</span><i>→</i><span>Maravanthe</span><i>→</i><span>Kundapura</span><i>→</i><span>Udupi</span><i>→</i><span>Kaup</span><i>→</i><span class="end">Mangaluru</span></div></div>
+      <div class="days"><div class="day"><b>Day 1</b><ol><li>Someshwara beach, Byndoor</li><li>Maravanthe beach road</li><li>Kundapura and Kodi beach</li><li>Udupi Sri Krishna Matha</li><li>Malpe beach at sunset</li></ol><span class="night">Night stay in Udupi</span></div><div class="day"><b>Day 2</b><ol><li>St Mary's Island boat trip</li><li>Kaup beach &amp; lighthouse</li><li>Kadri Manjunatha temple, Mangaluru</li><li>Kudroli Gokarnanatha temple</li><li>Panambur beach, then drop at Mangaluru or back to Murdeshwar</li></ol></div></div>
+      <button class="more" type="button" aria-expanded="false">See day plan <svg><use href="#i-down"/></svg></button>
+      <div class="row"><small>Price on WhatsApp</small><a class="btn btn-wa wa" data-msg="Hi GR Tours &amp; Travels, I'd like the Murdeshwar to Mangaluru package (2 days)." href="https://wa.me/919620936143" target="_blank" rel="noopener">Enquire</a></div>
+    </article>
+    <article class="rpk">
+      <div class="top"><div class="meta"><span class="chip red">2 days · 1 night</span><span class="chip">Western Ghats</span></div>
+        <h3>Uttara Kannada Falls</h3>
+        <div class="route"><span>Murdeshwar</span><i>→</i><span>Jog Falls</span><i>→</i><span>Sirsi</span><i>→</i><span class="end">Yana</span></div></div>
+      <div class="days"><div class="day"><b>Day 1</b><ol><li>Jog Falls</li><li>Sirsi Marikamba temple</li></ol><span class="night">Night stay in Sirsi</span></div><div class="day"><b>Day 2</b><ol><li>Sahasralinga</li><li>Unchalli Falls</li><li>Yana rocks</li><li>Back to Murdeshwar</li></ol></div></div>
+      <button class="more" type="button" aria-expanded="false">See day plan <svg><use href="#i-down"/></svg></button>
+      <div class="row"><small>Price on WhatsApp</small><a class="btn btn-wa wa" data-msg="Hi GR Tours &amp; Travels, I'd like the Uttara Kannada Falls package (2 days)." href="https://wa.me/919620936143" target="_blank" rel="noopener">Enquire</a></div>
+    </article>
+    <article class="rpk">
+      <div class="top"><div class="meta"><span class="chip red">3 days · 2 nights</span><span class="chip">Coast to coffee hills</span></div>
+        <h3>Murdeshwar to Sakleshpur</h3>
+        <div class="route"><span>Murdeshwar</span><i>→</i><span>Udupi</span><i>→</i><span>Karkala</span><i>→</i><span>Dharmasthala</span><i>→</i><span>Shiradi Ghat</span><i>→</i><span class="end">Sakleshpur</span></div></div>
+      <div class="days"><div class="day"><b>Day 1</b><ol><li>Udupi Sri Krishna Matha</li><li>Karkala Gommateshwara statue</li><li>Dharmasthala Manjunatha temple</li></ol><span class="night">Night stay in Dharmasthala</span></div><div class="day"><b>Day 2</b><ol><li>Drive up the Shiradi Ghat</li><li>Manjarabad Fort</li><li>Coffee estate walk</li><li>Sakleshwara temple</li></ol><span class="night">Night stay in Sakleshpur</span></div><div class="day"><b>Day 3</b><ol><li>Bisle Ghat viewpoint</li><li>Kukke Subramanya temple</li><li>Back to Murdeshwar</li></ol></div></div>
+      <button class="more" type="button" aria-expanded="false">See day plan <svg><use href="#i-down"/></svg></button>
+      <div class="row"><small>Price on WhatsApp</small><a class="btn btn-wa wa" data-msg="Hi GR Tours &amp; Travels, I'd like the Murdeshwar to Sakleshpur package (3 days)." href="https://wa.me/919620936143" target="_blank" rel="noopener">Enquire</a></div>
+    </article>
+    <article class="rpk">
+      <div class="top"><div class="meta"><span class="chip red">Your pace</span><span class="chip">Any place</span></div>
+        <h3>Make your own trip</h3>
+        <div class="route"><span>You choose</span><i>→</i><span class="end">We plan</span></div></div>
+      <div class="days"><div class="day"><b>You</b><ol><li>Tell us the places, dates and number of people</li></ol></div><div class="day"><b>We</b><ol><li>Plan the route, the timing and the right vehicle</li><li>Arrange rooms on the way if you need them</li></ol></div></div>
+      <button class="more" type="button" aria-expanded="false">See day plan <svg><use href="#i-down"/></svg></button>
+      <div class="row"><small>Price on WhatsApp</small><a class="btn btn-wa wa" data-msg="Hi GR Tours &amp; Travels, I'd like to plan my own trip." href="https://wa.me/919620936143" target="_blank" rel="noopener">Enquire</a></div>
+    </article>
+  </div>
+  <div class="dots" data-for="pkgRail" aria-hidden="true"></div>
+</div></section>
+
+<section class="band" id="places"><div class="wrap">
+  <div class="head"><span class="eyebrow">Places we cover</span><h2>Coast, ghats and coffee hills</h2><p>The towns our trips pass through most, from Gokarna in the north to Mangaluru and Sakleshpur in the south.</p></div>
+  <div class="plist" id="placeGrid"></div>
+</div></section>
+
+<section class="band alt" id="vehicles"><div class="wrap">
+  <div class="head"><span class="eyebrow">Our vehicles</span><h2>Pick the right size</h2><p>Every vehicle carries the GR Tours &amp; Travels name. Tell us how many people and we suggest the fit.</p></div>
+  <div class="grid three snap" id="vehRail">
+    <div class="veh"><div class="im"><img src="img/seat5.webp" alt="GR Tours & Travels 5-seater car"></div>
+      <div class="row"><h3>Family car</h3><span class="seats">5 seater</span></div>
+      <ul><li>Up to 4 passengers</li><li>Airport and city trips</li><li>Couples and small families</li></ul>
+      <a class="btn btn-wa wa" data-msg="Hi GR Tours & Travels, I'd like to book the 5-seater car." href="https://wa.me/919620936143" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Book 5 seater</a></div>
+    <div class="veh"><div class="im"><img src="img/seat7.webp" alt="GR Tours & Travels 7-seater family vehicle"></div>
+      <div class="row"><h3>Family MUV</h3><span class="seats">7 seater</span></div>
+      <ul><li>Up to 6 passengers</li><li>More room for luggage</li><li>Families on 2-day trips</li></ul>
+      <a class="btn btn-wa wa" data-msg="Hi GR Tours & Travels, I'd like to book the 7-seater." href="https://wa.me/919620936143" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Book 7 seater</a></div>
+    <div class="veh"><div class="im"><img src="img/seat11.webp" alt="GR Tours & Travels 11-seater tempo traveller"></div>
+      <div class="row"><h3>Tempo traveller</h3><span class="seats">11 seater</span></div>
+      <ul><li>Up to 10 passengers</li><li>Groups, weddings, temple tours</li><li>Long trips in comfort</li></ul>
+      <a class="btn btn-wa wa" data-msg="Hi GR Tours & Travels, I'd like to book the 11-seater tempo traveller." href="https://wa.me/919620936143" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Book 11 seater</a></div>
+  </div>
+  <div class="dots" data-for="vehRail" aria-hidden="true"></div>
+</div></section>
+
+<section class="band" id="how"><div class="wrap">
+  <div class="head"><span class="eyebrow">How to book</span><h2>Three steps, all on WhatsApp</h2></div>
+  <div class="steps">
+    <div class="step"><span class="n">1</span><div><h3>Send your trip</h3><p>Pickup place, where you want to go, date and number of people.</p></div></div>
+    <div class="step"><span class="n">2</span><div><h3>Get the price</h3><p>We reply with the vehicle, the route and the price for your trip.</p></div></div>
+    <div class="step"><span class="n">3</span><div><h3>We pick you up</h3><p>Confirm the booking and we're there on the day, on time.</p></div></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <span class="eyebrow">Contact</span>
+    <h2>Ready for your coastal trip?</h2>
+    <p>Message us your plan on WhatsApp or call. We cover Uttara Kannada, Udupi, Dakshina Kannada and Goa.</p>
+    <div class="acts">
+      <a class="btn btn-wa wa" data-msg="Hi GR Tours & Travels, I'd like to plan a trip." href="https://wa.me/919620936143" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chat on WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+919620936143"><svg><use href="#i-phone"/></svg>Call now</a>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="cc"><small>WhatsApp &amp; call</small><a href="tel:+919620936143">96209 36143</a></div>
+    <div class="cc"><small>Call</small><a href="tel:+919141857173">91418 57173</a></div>
+    <div class="cc"><small>Based in</small><span>Murdeshwar, Bhatkal Taluk, Uttara Kannada, Karnataka</span></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span><b>GR Tours &amp; Travels</b> · Safe journey, happy memories.</span>
+  <span>Taxi, airport pickups and tour packages from Murdeshwar.</span>
+</div></footer>
+
+<nav class="tabbar" aria-label="Quick actions">
+  <a href="#home"><svg><use href="#i-home"/></svg><span>Home</span></a>
+  <a href="#packages"><svg><use href="#i-map"/></svg><span>Packages</span></a>
+  <a class="wa tb-wa" data-msg="Hi GR Tours & Travels, I'd like to plan a trip." href="https://wa.me/919620936143" target="_blank" rel="noopener"><i><svg><use href="#i-wa"/></svg></i><span>WhatsApp</span></a>
+  <a href="#vehicles"><svg><use href="#i-car"/></svg><span>Vehicles</span></a>
+  <a href="tel:+919620936143"><svg><use href="#i-phone"/></svg><span>Call</span></a>
+</nav>
+
+<a class="fab wa" data-msg="Hi GR Tours & Travels, I'd like to plan a trip." href="https://wa.me/919620936143" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+(function(){
+  var WA = 'https://wa.me/919620936143?text=';
+  // every WhatsApp link opens directly with its ready message
+  document.querySelectorAll('a.wa').forEach(function(a){ a.href = WA + encodeURIComponent(a.getAttribute('data-msg')); });
+
+  // places
+  // places: add a photo file name as the 4th item when real photos arrive (e.g. 'img/place-gokarna.webp')
+  var P = [
+    ['Mangaluru','ಮಂಗಳೂರು','Airport city, Kadri and Kudroli temples, Panambur Beach'],
+    ['Dharmasthala','ಧರ್ಮಸ್ಥಳ','Manjunatha temple, the Bahubali statue, Kukke Subramanya nearby'],
+    ['Sakleshpur','ಸಕಲೇಶಪುರ','Coffee hills, Manjarabad Fort, Bisle Ghat viewpoint'],
+    ['Karkala','ಕಾರ್ಕಳ','Gommateshwara statue, Chaturmukha Basadi, Moodbidri nearby'],
+    ['Udupi','ಉಡುಪಿ','Sri Krishna Matha, Malpe beach, St Mary’s Island'],
+    ['Kundapura','ಕುಂದಾಪುರ','Maravanthe Beach, Kodi beach, the road to Kollur'],
+    ['Murdeshwar','ಮುರುಡೇಶ್ವರ','Shiva statue, Raja Gopura, Netrani Island'],
+    ['Honnavar','ಹೊನ್ನಾವರ','Sharavathi backwaters, Kasarkod Eco Beach, Apsarakonda falls'],
+    ['Jog Falls','ಜೋಗ ಜಲಪಾತ','Raja, Rani, Roarer and Rocket falls, best after the monsoon'],
+    ['Kumta','ಕುಮಟಾ','Mirjan Fort, Yana rocks, Vibhooti Falls'],
+    ['Gokarna','ಗೋಕರ್ಣ','Mahabaleshwar temple, Om and Kudle beaches'],
+    ['Sirsi','ಶಿರಸಿ','Marikamba temple, Sahasralinga, Unchalli Falls']
+  ];
+  document.getElementById('placeGrid').innerHTML = P.map(function(p){
+    var m = encodeURIComponent('Hi GR Tours & Travels, I\'d like a trip to ' + p[0] + '.');
+    return '<div class="it"><h3>' + p[0] + ' <small>' + p[1] + '</small></h3><a href="' + WA + m + '" target="_blank" rel="noopener">Plan trip →</a><p>' + p[2] + '</p></div>';
+  }).join('');
+
+  // phone menu
+  var mb = document.getElementById('menuBtn'), sh = document.getElementById('sheet');
+  function setMenu(open){ sh.hidden = !open; mb.setAttribute('aria-expanded', open); mb.innerHTML = '<svg><use href="#i-' + (open ? 'x' : 'menu') + '"/></svg>'; mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); }
+  mb.addEventListener('click', function(){ setMenu(sh.hidden); });
+  sh.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !sh.hidden) { setMenu(false); mb.focus(); } });
+
+  // package "see day plan" (phones)
+  document.querySelectorAll('.rpk .more').forEach(function(b){
+    b.addEventListener('click', function(){
+      var c = b.closest('.rpk'), open = !c.classList.contains('open');
+      c.classList.toggle('open', open); b.setAttribute('aria-expanded', open);
+      b.firstChild.nodeValue = open ? 'Hide day plan ' : 'See day plan ';
+    });
+  });
+
+  // swipe rails: dots follow the scroll
+  document.querySelectorAll('.dots').forEach(function(d){
+    var rail = document.getElementById(d.getAttribute('data-for')), kids = rail.children;
+    d.innerHTML = Array.prototype.map.call(kids, function(){ return '<i></i>'; }).join('');
+    var dots = d.children;
+    function mark(){
+      var x = rail.scrollLeft, best = 0, bd = 1e9;
+      for (var i = 0; i < kids.length; i++) { var dd = Math.abs(kids[i].offsetLeft - rail.offsetLeft - x - parseFloat(getComputedStyle(rail).paddingLeft || 0)); if (dd < bd) { bd = dd; best = i; } }
+      for (var j = 0; j < dots.length; j++) dots[j].classList.toggle('on', j === best);
+    }
+    rail.addEventListener('scroll', function(){ window.requestAnimationFrame(mark); }, { passive: true });
+    mark();
+  });
+
+  // enquiry form
+  var ppl = document.getElementById('f-ppl'), hint = document.getElementById('f-hint'), date = document.getElementById('f-date');
+  for (var i = 1; i <= 20; i++) { var o = document.createElement('option'); o.value = i; o.textContent = i + (i === 1 ? ' person' : ' people'); if (i === 4) o.selected = true; ppl.appendChild(o); }
+  var t = new Date(); date.min = t.getFullYear() + '-' + String(t.getMonth() + 1).padStart(2, '0') + '-' + String(t.getDate()).padStart(2, '0');
+  function vehicle(n){ return n <= 4 ? '5-seater car' : n <= 6 ? '7-seater' : n <= 10 ? '11-seater tempo traveller' : 'two vehicles'; }
+  function upd(){ hint.textContent = 'Suggested vehicle: ' + vehicle(+ppl.value) + ' · Price on WhatsApp'; }
+  ppl.addEventListener('change', upd); upd();
+  function fmt(v){ if (!v) return 'Not decided yet'; var d = new Date(v + 'T00:00'); return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }); }
+  document.getElementById('enq').addEventListener('submit', function(e){
+    e.preventDefault();
+    var g = function(id){ return document.getElementById(id).value; };
+    var msg = ['Hi GR Tours & Travels, I\'d like to plan a trip.',
+      'Pickup: ' + g('f-from'),
+      'Where to: ' + g('f-to'),
+      'Date: ' + fmt(g('f-date')),
+      'Days: ' + g('f-days'),
+      'People: ' + g('f-ppl'),
+      'Vehicle: ' + vehicle(+g('f-ppl')),
+      'Please share the price and availability.'].join('\n');
+    var a = document.createElement('a'); a.href = WA + encodeURIComponent(msg); a.target = '_blank'; a.rel = 'noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+})();
+</script>
+</body></html>

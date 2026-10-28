@@ -1,0 +1,8 @@
+# robots.txt for GR Tours & Travels
+# Official website: https://www.grtoursandtravelsmurudeshwar.com/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.grtoursandtravelsmurudeshwar.com/sitemap.xml
+

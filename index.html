@@ -631,39 +631,8 @@ footer b{color:var(--fg)}
   // featured destinations continuous slider
   var destinations = [
     {
-      id: 'murudeshwara',
-      name: 'Murudeshwara',
-      kannada: 'ಮುರುಡೇಶ್ವರ',
-      tag: 'Iconic Landmark',
-      description: 'Discover the magnificent Shiva statue and spectacular coastal views of Murudeshwara.',
-      image: 'img/murudeshwara.webp',
-      alt: 'Murudeshwara Temple and giant Lord Shiva statue beside the Arabian Sea',
-      objectPosition: 'center 30%'
-    },
-    {
-      id: 'dharmasthala',
-      name: 'Dharmasthala',
-      kannada: 'ಧರ್ಮಸ್ಥಳ',
-      tag: 'Pilgrimage',
-      description: 'Experience the spiritual atmosphere of one of Karnataka\'s renowned pilgrimage destinations.',
-      image: 'img/dharmasthala.webp',
-      alt: 'Dharmasthala Temple traditional architecture',
-      objectPosition: 'center 30%'
-    },
-    {
-      id: 'udupi',
-      name: 'Udupi',
-      kannada: 'ಉಡುಪಿ',
-      tag: 'Cultural Heritage',
-      description: 'Explore the spiritual heritage and cultural traditions of coastal Karnataka.',
-      image: 'img/udupi.webp',
-      alt: 'Udupi Sri Krishna Matha temple complex and sacred tank',
-      objectPosition: 'center 45%'
-    },
-    {
       id: 'gokarna',
       name: 'Gokarna',
-      kannada: 'ಗೋಕರ್ಣ',
       tag: 'Coastal Beach',
       description: 'Enjoy beautiful beaches, scenic coastal landscapes, and peaceful seaside views.',
       image: 'img/coastal-beach.webp',
@@ -673,7 +642,6 @@ footer b{color:var(--fg)}
     {
       id: 'coastal-landscapes',
       name: 'Coastal Landscapes',
-      kannada: 'ಮಿರ್ಜಾನ್ ಕೋಟೆ',
       tag: 'Historic Fort',
       description: 'Discover the natural beauty of Karnataka\'s lush landscapes.',
       image: 'img/green-landscape.webp',
@@ -682,8 +650,7 @@ footer b{color:var(--fg)}
     },
     {
       id: 'backwaters',
-      name: 'Backwaters',
-      kannada: 'ಹೊನ್ನಾವರ',
+      name: 'honnavara Backwaters',
       tag: 'Tranquil Waterways',
       description: 'Experience tranquil waterways and the scenic charm of coastal Karnataka.',
       image: 'img/backwaters.webp',
@@ -693,7 +660,6 @@ footer b{color:var(--fg)}
     {
       id: 'river-boating',
       name: 'River Boating',
-      kannada: 'ದೋಣಿ ವಿಹಾರ',
       tag: 'Eco Boating',
       description: 'Enjoy beautiful rivers, peaceful surroundings, and memorable travel experiences.',
       image: 'img/river-boating.webp',
@@ -701,14 +667,31 @@ footer b{color:var(--fg)}
       objectPosition: 'center 45%'
     },
     {
-      id: 'temple-architecture',
-      name: 'Temple Architecture',
-      kannada: 'ಶಿರಸಿ ಮಾರಿಕಾಂಬಾ',
-      tag: 'Historic Temple',
-      description: 'Explore historic temples and the architectural heritage of Karnataka.',
-      image: 'img/temple-architecture.webp',
-      alt: 'Historic temple architecture illuminated in the evening',
-      objectPosition: 'center 60%'
+      id: 'murudeshwar',
+      name: 'Murudeshwar',
+      tag: 'Iconic Landmark',
+      description: 'Discover the magnificent Shiva statue and spectacular coastal views of Murudeshwar.',
+      image: 'img/murudeshwara.webp',
+      alt: 'Murudeshwar Temple and giant Lord Shiva statue beside the Arabian Sea',
+      objectPosition: 'center 30%'
+    },
+    {
+      id: 'dharmasthala',
+      name: 'Dharmasthala',
+      tag: 'Pilgrimage',
+      description: 'Experience the spiritual atmosphere of one of Karnataka\'s renowned pilgrimage destinations.',
+      image: 'img/dharmasthala.webp',
+      alt: 'Dharmasthala Temple traditional architecture',
+      objectPosition: 'center 30%'
+    },
+    {
+      id: 'udupi',
+      name: 'Udupi',
+      tag: 'Cultural Heritage',
+      description: 'Explore the spiritual heritage and cultural traditions of coastal Karnataka.',
+      image: 'img/udupi.webp',
+      alt: 'Udupi Sri Krishna Matha temple complex and sacred tank',
+      objectPosition: 'center 45%'
     }
   ];
 
@@ -724,7 +707,7 @@ footer b{color:var(--fg)}
         '<span class="dest-badge">' + d.tag + '</span>' +
         '<div class="dest-overlay">' +
           '<div class="dest-head-row">' +
-            '<h3 class="dest-name">' + d.name + ' <small>' + d.kannada + '</small></h3>' +
+            '<h3 class="dest-name">' + d.name + '</h3>' +
             '<span class="dest-cta">Plan trip <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-right"/></svg></span>' +
           '</div>' +
           '<p class="dest-desc">' + d.description + '</p>' +
